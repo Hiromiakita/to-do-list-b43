@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link text-white bg-primary" activeClassName="text-secondary" href="a">Agregar Tarea +</a>
+                        <a className="nav-link text-white bg-primary" activeClassName="text-secondary" href="a">Agregar Tarea +<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
