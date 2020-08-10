@@ -1,0 +1,9 @@
+.main {
+    background-image: url('../assets/blue-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* height: 100vh; */
+    min-height: 100vh;
+    height: -webkit-fill-available;
+}
