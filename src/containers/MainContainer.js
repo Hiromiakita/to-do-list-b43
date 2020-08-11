@@ -7,7 +7,7 @@ import { TaskModel } from '../utils/TaskModel';
 
 const MainContainer = () => {
 
-    const URL = 'https://AQUIVAELTUYO.firebaseio.com/task.json';
+    const URL = 'https://hiromi-test.firebaseio.com/task.json';
 
     const [tasks, setTasks] = useState([]);
 
@@ -18,7 +18,7 @@ const MainContainer = () => {
     }
 
     const deleteTask = (id) => {
-        axios.delete(`https://AQUIVAELTUYO.firebaseio.com/task/${id}.json`)
+        axios.delete(`https://hiromi-test.firebaseio.com/task/${id}.json`)
           .then(() => getTasks())
           .catch((error) => alert(error))
     }
@@ -31,6 +31,7 @@ const MainContainer = () => {
       }
 
     useEffect(() => {
+        console.log('Soy useEffect');
         getTasks();
     }, []);
 
@@ -41,8 +42,7 @@ const MainContainer = () => {
 
                 <div className="container pt-4">
 
-                    {tasks
-                        ? Object.keys(tasks).map((id) =>
+                    {tasks ? Object.keys(tasks).map((id) =>
                             <Task
                                 key={id}
                                 id={id}
@@ -53,8 +53,7 @@ const MainContainer = () => {
                                 completeTask={completeTask}
                             />)
                         : <h1 className="text-white text-center">
-                            Completaste todas tus tareas
-              </h1>
+                            Completaste todas tus tareas </h1>
                     }
 
                 </div>
