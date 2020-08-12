@@ -8,6 +8,7 @@ const CreateForm = (props) => {
 
 
     const handlerTitle = (evento) => {
+        console.log(evento.target.value);
         setTitle(evento.target.value);
     }
 
